@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<!-- 文档的声明,当前是一个html文档,遵循html5标准 -->
+<html lang="zh-CN">
+<head>
+	<!-- head用于嵌套给浏览器使用的设置标签,配置浏览器的信息-->
+	<meta charset = "UTF-8">
+	<title>后代选择器</title>
+	<style>
+	/*首先找到.box类对应的所有标签,然后找到标签的所有后代li标签*/
+		.box li {
+			color: red;
+		}
+
+	/*并集选择器*/
+		h1, p {
+			color: gray;
+		}
+
+	/*给div下的h2子标签设置颜色 只能设置div下一级的二级不行*/
+		div > h2 {
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div>
+		<h2>哈哈</h2>
+		<h2>呵呵</h2>
+	</div>
+	<div>
+		<h1>我是标题</h1>
+		<p>我是段落</p>
+		<h2>我是h2</h2>
+	</div>
+
+	<div class="box">
+		<ul>
+			<li>北京</li>
+			<li>上海</li>
+			<li>广州</li>
+		</ul>
+		<ul>
+			<li>java</li>
+			<li>php</li>
+			<li>python</li>
+		</ul>
+	</div>
+
+	<div>
+		<ul>
+			<li>郑州</li>
+			<li>西安</li>
+			<li>成都</li>
+		</ul>
+	</div>
+</body>
+</html>

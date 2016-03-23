@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- 文档的声明,当前是一个html文档,遵循html5标准 -->
+<html lang="zh-CN">
+<head>
+<!-- head用于嵌套给浏览器使用的设置标签,配置浏览器的信息-->
+	<meta charset = "UTF-8">
+	<title>01书写CSS的案例</title>
+	/*<style type="text/css">	/*内嵌CSS样式*/
+	
+	/*导入样式必须写在所有的其他样式设置之前*/
+		@import url(CSS/main.css);
+		p{
+			color: green;设置前景色，也就是字体颜色
+			background-color: silver;
+		}
+	</style>*/
+
+	<!-- 外联css样式 -->
+	<!-- <link rel="stylesheet" href="CSS/main.css"> -->
+</head>
+
+<body>
+	<h1 style="color:red; font-size:120px">悦点信息css样式学习</h1>	<!-- 行内样式 -->
+	<p>这是一个段落</p>
+	<!-- ul>(li>a[href="#"])*3 -->
+	<ul>
+		<li><a href="#">北京</a></li>
+		<li><a href="#">上海</a></li>
+		<li><a href="#">广州</a></li>
+	</ul>
+</body>
+</html>

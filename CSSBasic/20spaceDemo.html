@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>空白符的处理</title>
+
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			border: 1px solid red;
+		}
+
+		.noWrap {
+			white-space: noWrap;
+		}
+
+		.pre {
+			white-space: pre;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="normal">
+		normal:官方网站www.joyskim.com
+	</div>
+
+	<div class="noWrap">
+		noWrap:官方网站www.joyskim.com
+	</div>
+
+	<!-- 保留所有的空白符 -->
+	<div class="pre">
+		pre:官方网站www.joyskim.com
+		var i = 0;
+		i++;
+		console.log(i);
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS清除浮动隔墙法</title>
+
+	<style>
+
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		.header, .asider, .main, .footer {
+			background-color: teal;
+			border: 1px solid yellowgreen;
+			/*下外边距*/
+			margin-bottom: 10px;
+		}
+
+		.header {
+			height: 100px;
+		}
+
+		.main {
+			/*左外边距*/
+			/*margin-left: 202px;*/
+			width: 180px;
+			height: 500px; 
+			float: right;
+		}
+
+		.asider {
+			width: 200px;
+			height: 300px;
+			float: left;
+		}
+
+		/*隔墙法放置一个空的div清除浮动,下面的DIV不敢咋样都会按照标准流进行布局*/
+		.clear-both {
+			clear: both;
+		}
+		.footer {
+			height: 50px;
+			 /*清除左右浮动,footer就下来*/
+			/*clear: both;*/
+			/*clear: left;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="header">header</div>
+	<div class="asider">asider</div>
+	<div class="main">main</div>
+	<div class="clear-both"></div>
+	<div class="footer">footer</div>
+</body>
+</html> 

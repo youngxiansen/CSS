@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<!-- 文档的声明,当前是一个html文档,遵循html5标准 -->
+<html lang="zh-CN">
+<head>
+	<!-- head用于嵌套给浏览器使用的设置标签,配置浏览器的信息-->
+	<meta charset = "UTF-8">
+	<title>字体的综合显示</title>
+	<style>
+	/*	p {
+			font-size: 20px;
+			font-weight: 700;
+			font-style: oblique;
+			font-family: "微软雅黑";
+		}*/
+
+		/*font字体合写*/
+		p {
+			/*font:字体样式 字体是否加粗 字体大小/行高 字体类型 中间空格隔开和上面的效果是一样的(推荐使用,注意顺序);*/
+			/*注意字体合写必须写字体大小和字体类型否则不起作用*/
+			font: oblique 700 20px 微软雅黑;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<!-- ul>li*2 快捷生成无序标签-->
+	<ul>
+		<li>设置字体的大小为20px</li>
+		<li>设置字体加粗</li>
+		<li>设置字体倾斜显示</li>
+		<li>设置字体类型微软雅黑</li>
+
+		<br>
+		<br>
+		<p>gif图片只能处理256中颜色   不适于渐变色 常用于logo小图标及其他色彩相对单一的图像   特点：小，兼容性好，支持透明，但是色彩不多</p>
+	</ul>
+
+</body>
+</html>

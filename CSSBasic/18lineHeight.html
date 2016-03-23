@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>行高的练习</title>
+	<style>
+		* {
+			padding: 0; margin: 0;
+		}
+		p.demo {
+			height: 100px;
+			font-size: 40px;
+			background-color: silver;
+
+			line-height: 100px;
+		}
+
+		.wrap {
+			font: 16px "黑体";
+			background-color: green;
+		}
+
+		.wrap p {
+			background-color: red;
+
+			/*此时行高是30px*/
+			font: 20px/1.5em "宋体";
+
+			/*效果和上面的一样*/
+			font: 20px/1.5 "宋体";
+
+			font: 20px/40px "宋体";
+		}
+	</style>
+</head>
+<body>
+	<p class="demo">上海悦点信息科技有限公司</p>
+
+	<div class="wrap">
+		我是老子div
+		<p>我是子段落</p>
+		我是父标签的内容
+	</div>
+</body>
+</html>

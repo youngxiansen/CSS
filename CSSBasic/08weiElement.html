@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- 文档的声明,当前是一个html文档,遵循html5标准 -->
+<html lang="zh-CN">
+<head>
+	<!-- head用于嵌套给浏览器使用的设置标签,配置浏览器的信息-->
+	<meta charset = "UTF-8">
+	<title>伪元素</title>
+
+	<style>
+		.article-txt:first-line {
+			color: red;
+		}
+
+		.article-txt:first-letter {
+			font-size: 30px;
+		}
+		
+		/*选择第一个孩子是span标签的元素*/
+		span:first-child {
+			color: blue;
+		}
+
+		.wrap:before, .wrap:after {
+			content: "------------";
+			display: block;/*让当前伪元素当成块级元素 单独的拿做一行*/
+		}
+	</style>
+</head>
+
+<body>
+	<p class="article-txt">
+		伪元素
+		是控制内容的
+		:first-line 
+		:first-letter
+		注意:以上两个只能用于块级元素:以上两个只能用于块级元素
+		<br>
+		伪元素
+		是控制内容的
+		:first-line 
+		:first-letter
+		注意:以上两个只能用于块级元素:以上两个只能用于块级元素
+	</p>
+
+	<div>
+		<span>我是第1个儿子</span>
+		<span>我是第2个儿子</span>
+		<span>我是第3个儿子</span>
+	</div>
+	<p>
+		<span>我是第1个span</span>
+		<span>我是第2个span</span>
+		<span>我是第3个span</span>
+	</p>
+	
+	<div>
+		<hr>
+	</div>
+	<div class="wrap">
+		我是div
+	</div>
+	<div>
+		<hr>
+	</div>
+
+</body>
+</html>

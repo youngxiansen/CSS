@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>背景综合练习2</title>
+
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		ul {
+			list-style: none;
+
+		}
+
+		.nav {
+
+			/*设置单词的间距*/
+			/*letter-spacing: -4px;*/
+			word-spacing: -4px;
+		}
+
+		.nav a, .nav a:visited {
+			 color: #000;
+			 text-decoration: none;
+		}
+		/*使用inline-block实现菜单导航*/
+
+		.nav-item {
+			/*转换为行内快元素之后，块与块元素之间会有空隙*/
+			display: inline-block;/*ie6和ie7都不支持inline-block*/
+
+			*display: inline;	/*这个*代表只有ie6和IE7能识别的CSSS设置	*/
+			zoom: 1;	/*和上面一行配合使用*/
+
+			
+		}
+
+		.nav-link {
+			display: inline-block;
+			width: 102px;
+			height: 102px;
+			background: url(../img/chat_gray.png) no-repeat;
+			line-height: 102px;
+			text-align: center;
+		}
+		/*不考虑IE6的话可用用下面的方法*/
+
+		.nav-link:hover {
+			background: url(../img/chat.png) no-repeat;
+		}
+
+
+	</style>
+	
+</head>
+<body>
+
+	<ul class="nav">
+		<li class="nav-item"><a href="#" class="nav-link">悦点信息</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">悦点信息</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">悦点信息</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">悦点信息</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">悦点信息</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">悦点信息</a></li>
+	</ul>
+</body>
+</html>

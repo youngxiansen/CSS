@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<!-- 文档的声明,当前是一个html文档,遵循html5标准 -->
+<html lang="zh-CN">
+<head>
+	<!-- head用于嵌套给浏览器使用的设置标签,配置浏览器的信息-->
+	<meta charset = "UTF-8">
+	<title>属性选择器</title>
+	<style>
+		h1[id] {
+			color: red;
+		}
+
+		/*把拥有id和class属性的h1标签选出来然后设置大小*/
+		h1[id][class] {
+			font-size: 60px;
+		}
+		input[type="text"] {
+			background-color: purple;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>我是标题h1</h1>
+	<h1 id="title-color" class="font-big">我也是标题h2</h1>
+	<input type="text">
+	<input type="password">
+</body>
+</html>

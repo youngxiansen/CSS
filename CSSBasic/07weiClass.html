@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<!-- 文档的声明,当前是一个html文档,遵循html5标准 -->
+<html lang="zh-CN">
+<head>
+	<!-- head用于嵌套给浏览器使用的设置标签,配置浏览器的信息-->
+	<meta charset = "UTF-8">
+	<title>伪类的使用</title>
+	<style>
+		a:link {
+			color: red;	/*未访问的颜色*/
+		}
+
+		a:visited {
+			color: green;/*访问过的颜色*/
+		}
+		
+		/*鼠标放上去的颜色*/
+		a:hover {
+			background-color: gray;
+			color: white;
+		}
+		
+		/*鼠标点击但是不松手*/
+		a:active {
+			color: blue;
+		}
+
+		a:focus {
+			font-size: 40px;
+		}
+
+		/*LoVe HAte原则*/
+
+		.my-name:focus {
+			background-color: blue;
+		}
+	</style>
+</head>
+	<a href="#">当前网址</a>
+	<a href="#">当前网址</a>
+	<a href="http://www.joyskim.com">悦点官网</a>
+	<a href="http://www.baidu.com">百度</a>
+	<a href="http://www.itcast.cn">传智</a>
+	<br>
+	<br>
+	<input type="text" class="my-name">
+<body>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- 文档的声明,当前是一个html文档,遵循html5标准 -->
+<html lang="zh-CN">
+<head>
+	<!-- head用于嵌套给浏览器使用的设置标签,配置浏览器的信息-->
+	<meta charset = "UTF-8">
+	<title>02CSS案例</title>
+	<style>
+		h1 { color: green; }
+		span { font-size: 14px; }
+
+		/*通配符标签	通配符的穿透力很强,优先级高于继承的样式,会覆盖继承的样式,一般不用*/
+		* {
+		font-size: 12px;
+		}
+
+		/*id 选择器 只允许是字母数字和下划线*/
+		#p1 {
+			color: black;
+			font-size: 20px;
+		}
+
+		#p2 {
+			font-size: 10px;
+			color: yellow;
+		}
+	
+	</style>
+
+	
+</head>
+
+<body>
+	<h1>我是标题</h1>
+	<p id="p1" style="background-color: red">我是段落p1</p>
+	<p id="p2">我是段落p2</p>
+	<span>我是span标签</span>
+</body>
+</html>

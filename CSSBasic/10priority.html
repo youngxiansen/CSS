@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- 文档的声明,当前是一个html文档,遵循html5标准 -->
+<html lang="zh-CN">
+<head>
+	<!-- head用于嵌套给浏览器使用的设置标签,配置浏览器的信息-->
+	<meta charset = "UTF-8">
+	<title>优先级</title>
+	<style>
+
+		/*内联样式的优先级最高（行内样式）
+		id选择器的优先级仅次于内联高于类选择器
+		标签选择器低于类选择器
+		继承的优先级大于默认的样式
+
+		行内(内联)>id选择器>类选择器>标签选择器*/
+		#text-wrap {
+			color: gray;
+		}
+		.box {
+			color: blue;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- <div class="box" id="text-wrap" style="color: red"> -->
+	<div class="box" id="text-wrap">
+		我是div
+	</div>
+</body>
+</html>

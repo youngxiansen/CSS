@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>嵌套块级元素的外边距合并</title>
+<!-- 当两个块级元素,上面块级元素有下外边距,下面块级元素有上外边距,两个盒子上下的距离会取两个边距的最大值,而不是相加处理. -->
+	<style>
+		.box1 {
+			border: 1px solid red;
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+
+		.box2 {
+			background-color: #369;
+			height: 200px;
+			width: 200px;
+			margin-top: 20px;
+		}
+
+		.box3-child {
+			background-color: #000;
+			margin-top: 100px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100px;
+			height: 100px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2">
+		
+		<div class="box3-child">
+			child
+		</div>
+		father
+	</div>
+</body>
+</html>

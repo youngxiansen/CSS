@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<!-- 文档的声明,当前是一个html文档,遵循html5标准 -->
+<html lang="zh-CN">
+<head>
+	<!-- head用于嵌套给浏览器使用的设置标签,配置浏览器的信息-->
+	<meta charset = "UTF-8">
+	<title>继承</title>
+
+	<style>
+
+	/*所以字相关的可以继承,比如color/text-系列/font-系列/line-系列/cursor	*/
+	/*边框、外边距、内边距、背景、定位、元素宽高等属性不可继承、所有盒子相关的不能继承*/
+		.box {
+			color: red;
+			font-size: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		我是div
+		<p>
+			我是段落
+		</p>
+	</div>
+</body>
+</html>

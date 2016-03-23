@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>clearfix原来实战</title>
+
+	<style>
+
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		.header, .asider, .main, .footer {
+			/*bd+快捷键*/
+			border: 1px solid red;
+			background-color: silver;
+			margin-bottom: 10px;
+			height: 200px;
+		}
+
+		.asider {
+			height: 300px;
+			width: 200px;
+			float: left;
+		}
+
+		.main {
+			width: 980px;
+			/*两个浮动的元素应该是并排显示的*/
+			/*margin-left: 202px;*/
+			float: left;
+		}
+
+		.clearfix {
+			/*触发bfc,div具有包裹性*/
+			display: table;
+		}
+
+		.clearfix:before, .clearfix:after {
+			content: "";
+			display: block;
+			clear: both;
+			visibility: hidden;
+		}
+
+		.clearfix {
+			/*IE6不能触发bfc*/
+			_zoom: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		header
+	</div>
+
+	<!-- 使aside和main在一行显示 -->
+	<div class="wrap clearfix">
+		<div class="asider">
+		asider
+		</div>
+
+		<div class="main">
+			main
+		</div>	
+	</div>
+
+	<div class="footer">
+		footer
+	</div>
+</body>
+</html>

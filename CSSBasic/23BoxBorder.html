@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>设置盒子的边框</title>
+
+	
+	<style>
+		.box {
+			height: 200px;
+			width: 200px;
+			background-color: green;
+
+			/*设置上边框的宽度*/
+			border-top-width: 20px;
+			border-top-color: red;
+
+			/*设置上边框的样式：虚线、点线、实线*/
+			border-top-style: double;
+
+
+			/*边框的样式设置也可以进行合写*/
+			/*border-top 宽度 样式 颜色*/
+			border-bottom: 20px dotted yellow;
+
+			/*也可以用一行CSS设置上下左右所有的边框样式*/
+			border: 10px double gray;
+		}
+ 
+
+		img {
+			height: 200px;
+			width: 200px;
+
+			/*去掉默认图片的边框,兼容性最好的,因为在某些老的浏览器中,图片默认是有边框的*/
+			border: 0 none;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		
+	</div>
+
+	<br>
+	<div>
+		<img src="img/billAdd.png" alt="">
+	</div>
+
+</body>
+</html>
+
+
+

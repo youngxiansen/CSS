@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<!-- 文档的声明,当前是一个html文档,遵循html5标准 -->
+<html lang="zh-CN">
+<head>
+	<!-- head用于嵌套给浏览器使用的设置标签,配置浏览器的信息-->
+	<meta charset = "UTF-8">
+	<title>display css属性</title>
+	<style>
+		div {
+			background-color: red;
+			/*把块级标签变成行内标签*/
+			display: inline;   
+		}
+
+		strong {
+			display: block;	/*把行内标签变成块级标签
+			/*display: none; */  /*可以移除标签*/
+		}
+
+		s {
+			/*不显示标签,但是还占着控件*/
+			/*visibility: hidden;	*/
+		}
+
+		.demo-inline {
+			display: inline-block;
+			height: 300px;
+		}
+
+	</style>
+</head>
+
+<body>
+	
+
+<!-- 	10 行内块元素设置
+				宽高			边距				是否独占行
+行内元素			不可设置		只有左右边距		否
+块级元素			可以设置		上下左右都有		是
+行内块元素		可以设置		上下左右都有		否 -->
+
+	<!-- 行内标签 -->
+	<span>我是span标签</span>
+	<strong>我是strong标签</strong>
+	<s>我是s标签</s>
+
+	<div>
+		我是div
+	</div>
+	
+	<!-- div.demo-inline按住tab键可以直接生成div加类的标签 -->
+	<div class="demo-inline">
+		我是一个行内块标签
+	</div>
+
+</body>
+</html>
+
+
+
+

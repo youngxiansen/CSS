@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>absolute绝对定位</title>
+
+	<style>
+
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		.header, .wrap, .close {
+			background-color: teal;
+			border: 1px solid #000;
+		}
+
+		.header {
+			height: 200px;
+		}
+	
+		.wrap {
+			background-color: #09C;
+			width: 400px;
+			position: relative; 
+		}
+
+		.close {
+			height: 20px;
+			width: 20px;
+			/*出现在body的右上角是因为close的父控件是默认的static,所以子集会一直向上查找,直到遇见不是static的定位,如果最终没找到就是以body,把父控件设置成不是static的定位方式就阻止了继续向上查找*/
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		
+	</div>
+
+	<div class="wrap">
+		<div class="txt">
+			txt
+		</div>
+		<div class="main"> 
+			main
+		</div>
+		<div class="close">
+			×
+		</div>
+
+		
+	</div>
+
+
+</body>
+</html>

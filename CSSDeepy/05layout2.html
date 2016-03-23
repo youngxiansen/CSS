@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全浮动方式实现网站布局</title>
+
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		.header, .nav, .main, .footer, .wrap {
+			background-color: silver;
+			border: 1px solid teal;   
+			margin-bottom: 10px;
+			width: 1190px;
+			margin: 0 auto 10px auto;
+		}
+
+		.header, .footer {
+			height: 100px;
+		}
+		
+		.wrap {
+			/*阻止高度塌陷*/
+			overflow: hidden;
+		}
+		.nav, .main {
+			height: 300px;
+			float: left;
+		}
+
+		.nav {
+			width: 200px;
+		}
+
+		.main {
+			/*如果main的宽度超过了wrapDIV的宽度,main就被挤下来了*/
+			/*1190-202(nav像素盒子)-2(自身的边框)*/
+			width: 986px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		header
+	</div>
+
+	<div class="wrap">
+		<div class="nav">
+			nav
+		</div>
+
+		<!-- .main+.footer 可有可以同时创建两个 -->
+		<div class="main">
+			main
+		</div>	
+	</div>
+
+	<div class="footer">
+		footer
+	</div>
+</body>
+</html>

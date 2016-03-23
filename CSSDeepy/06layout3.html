@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全浮动版心不居中的两列网站布局</title>
+		<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		.header, .nav, .main, .footer {
+			background-color: silver;
+			border: 1px solid teal;   
+			margin-bottom: 10px;
+			/*width: 1190px;*/
+			/*margin: 0 auto 10px auto;*/
+		} 
+
+		.header, .footer {
+			height: 100px;
+		}
+		
+		.nav, .main {
+			height: 300px;
+		}
+
+		.nav {
+			width: 200px;
+			float: left;
+		}
+
+		.main {
+			/*如果main的宽度超过了wrapDIV的宽度,main就被挤下来了*/
+			/*1190-202(nav像素盒子)-2(自身的边框)*/
+			width: 986px;
+			/*float: left;*/
+			margin-left: 202px;
+		}
+
+		.footer {
+			/*清除左右的浮动*/
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		header
+	</div>
+
+		<div class="nav">
+			nav
+		</div>
+
+		<!-- .main+.footer 可有可以同时创建两个 -->
+		<div class="main">
+			main
+		</div>	
+
+	<div class="footer">
+		footer
+	</div>
+</body>
+</html>

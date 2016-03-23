@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- 文档的声明,当前是一个html文档,遵循html5标准 -->
+<html lang="zh-CN">
+<head>
+	<!-- head用于嵌套给浏览器使用的设置标签,配置浏览器的信息-->
+	<meta charset = "UTF-8">
+	<title>字体的设置</title>
+	<style>
+		h1 {
+			font-family: "黑体";
+		}
+
+		p {
+			/*font-family: "宋体";*/
+
+			/*允许写多个字体,用逗号(英文)隔开  优先级从左向右*/
+			/*在浏览器的控制台输入
+			escape("微软雅黑")按回车得到编码
+			"%u5FAE%u8F6F%u96C5%u9ED1"*/
+			font-family: "微软雅黑", "lucida Console";
+		}
+	</style>
+</head>
+	<h1>学习标题的设置</h1>
+	<p>
+	这是一个段落
+	我们的官网是<a href="http:www.joyskim.com">网址</a>
+	</p>
+<body>
+
+</body>
+</html>

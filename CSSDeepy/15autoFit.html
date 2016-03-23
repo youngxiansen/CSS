@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三列自适应布局</title>
+
+	<style>
+
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		.sub-nav, .aside {
+			width: 200px;
+			background-color: teal;
+			height: 300px;
+		}
+
+		.main {
+			margin-left: 203px;
+			margin-right: 203px;
+			height: 300px;
+			background-color: yellowgreen;
+		}
+
+		.sub-nav {
+			float: left;
+		}
+
+		.aside {
+			float: right;
+		}
+	</style>
+</head>
+<body>
+<!-- 	<div class="sub-nav">
+		sub-nav
+	</div>
+	块级元素独占一行,即使aside右浮动,也是在main之下
+	<div class="main">
+		main
+	</div>
+	<div class="aside">
+		aside
+	</div> -->
+
+
+	<div class="sub-nav">
+		sub-nav
+	</div>
+
+
+	<div class="aside">
+		aside
+	</div>
+
+		<div class="main">
+		main
+	</div>
+</body>
+</html>

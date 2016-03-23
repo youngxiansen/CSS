@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- 文档的声明,当前是一个html文档,遵循html5标准 -->
+<html lang="zh-CN">
+<head>
+	<!-- head用于嵌套给浏览器使用的设置标签,配置浏览器的信息-->
+	<meta charset = "UTF-8">
+	<title>选择器和复合选择器的案例</title>
+<!-- 
+	内联样式的优先级最高（行内样式）
+	id选择器的优先级仅次于内联高于类选择器 但是高于类选择器
+	类选择器高于标签选择器
+	继承的优先级大于默认的样式
+	通配符的优先级大于继承
+	标签选择器的优先级高于通配符
+
+	行内(内联)>id选择器>类选择器>标签选择器>统配符>继承 -->
+	<style>
+
+	/*继承的样式大于默认的样式*/
+		body {
+			color: red;
+		}
+
+		#color-change {
+			color: yellow;/*id选择器的优先级仅次于内联高于类选择器*/
+		}
+	
+		.title-color {
+			color: purple;/*类选择器高于标签选择器*/
+		}
+		h1 {
+			color: green;/*标签选择器的优先级高于通配符*/
+		}	
+
+		* {
+			color: blue;/*通配符的优先级大于继承*/
+		}
+
+
+		/*
+		*	复合选择器的比较
+		*	0-行内 0-id选择器 2-类选择器 1-标签选择器
+			0-行内 2-id选择器 0-类选择器 0-标签选择器
+		*/
+		.aside .aside-dt h1 {
+			background-color: silver;
+		}
+
+		.aside #title-txt {
+			background-color: blue;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="wrap">
+		<div class="aside">
+			<div class="aside-dt" id="title-txt">
+				<h1 class="title-color" id="color-change">我是标题H1</h1>
+			</div>
+
+			<div>
+				<p>我是段落</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

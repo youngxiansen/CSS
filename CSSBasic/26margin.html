@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>外边距的使用</title>
+	
+	<style>
+
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+		.box1, .box2, .box3 {
+			border: 10px solid red;
+			height: 100px;
+		}
+
+		.box2 {
+			border-color: blue;
+			/*上下10 左右100*/
+			margin: 10px 100px;
+
+			/*上右下左*/
+			margin: 10px 10px 20px 5px;
+		}
+
+		/*实现让4号div居中显示,并且宽度设置为980px像素 */
+		/*可以让box4水平居中, 0 auto,使用很频繁*/
+		.box4 {
+			width: 980px;
+			height: 100px;
+			background-color: purple;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<!-- .box$*3 -->
+	<div class="box1">1</div>
+	<div class="box2">2</div>
+	<div class="box3">3</div>
+	<div class="box4">4</div>
+</body>
+</html>

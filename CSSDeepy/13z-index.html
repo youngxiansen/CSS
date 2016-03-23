@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>z-index实例</title>
+
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		.wrap {
+			position: relative;
+			height: 400px;
+			width: 400px;
+			background-color: silver;
+			border: 1px solid #000;
+		}
+
+		.box1, .box2, .box3 {
+			width: 200px;
+			height: 200px;
+			border: 1px solid teal;
+			position: absolute;
+		}
+
+		.box1 {
+			background-color: red;
+			top: 0;
+			left: 0;
+		}
+
+		.box2 {
+			background-color: yellow;
+			top: 30px;
+			left: 30px;
+			z-index: 200;
+		}
+
+		.box3 {
+			background-color: green;
+			top: 60px;
+			left: 60px;
+			z-index: 300;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<div class="wrap">
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+	</div>
+
+</body>
+</html>

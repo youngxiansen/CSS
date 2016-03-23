@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS盒模型</title>
+	<style>
+		* {
+			padding: 0;	/*内边距*/
+			margin: 0;	/*外边距*/
+		}
+
+		.box {
+			width: 200px;
+			height: 200px;
+			
+			/*内背景色是可以穿透内边距的*/
+			background-color: #ccc;
+			padding: 100px;
+			border: 50px dotted red;	/*边框*/
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p>我是谁</p>
+
+	</div>
+	</body>
+</html>
