@@ -13,12 +13,43 @@
 		.icon {
 			display: inline-block;
 			vertical-align: middle;
+			width: 20px;
+			height: 20px;
+			background: url(../img/taobao-bg.png) no-repeat -110px -98px;
+			/*background: url(../img/taobao.png);*/
+		}
+
+		.wrap {
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+/*******************************************************************/
+		.wrap2 {
+			/*触发BFC*/
+			display: table;
+		}
+
+		.icon2, .wrap2 span {
+			float: left;
+			height: 20px;
+		}
+
+		.icon2 {
+			width: 20px;
+			height: 20px;
+			background: url(../img/taobao-bg.png) no-repeat -110px -98px;
 		}
 	</style>
 </head>
 <body>
 	<div class="wrap">
-		<i id="icon"></i><span>主题市场</span>
+		<i class="icon"></i><span>主题市场</span>
+	</div>
+
+
+	<div class="wrap2">
+		<i class="icon2"></i><span>主题市场2</span>
 	</div>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>24消除行内块的空隙</title>
+
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		div span {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			background-color: red;
+			border: 1px solid #000;
+			font-size: 20px;
+		}
+
+		/*消除块与块之间的空隙*/
+		/*1font-size=0方法*/
+		/*div {
+			font-size: 0;
+		}*/
+
+		/*2使用html注释消除空格 或者把行内块元素放在一行*/
+
+		/*3使用浮动*/
+
+		/*4使用letter-space或者word-space变成负数*/
+
+		div {
+			letter-spacing: -5px;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<span>1</span>
+		<span>2</span>
+		<span>3</span><!--  
+		--><span>4</span>
+	</div>
+	
+</body>
+</html>
